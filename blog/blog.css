@@ -33,10 +33,10 @@ nav {
   height: 100%; display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  font-weight: 700; font-size: 16px; color: var(--text);
+  font-weight: 700; font-size: 17px; color: var(--text);
   text-decoration: none; display: flex; align-items: center; gap: 10px;
 }
-.nav-logo img { width: 28px; height: 28px; border-radius: 6px; }
+.nav-logo img { width: 29px; height: 29px; border-radius: 6px; }
 .nav-links { display: flex; gap: 24px; align-items: center; }
 .nav-links a { color: var(--text-dim); text-decoration: none; font-size: 14px; transition: color .15s; }
 .nav-links a:hover { color: var(--text); }
