@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Best BakkesMod Alternative in 2026 — Bakkboard</title>
-  <meta name="description" content="Looking for a BakkesMod alternative in 2026? Bakkboard is a free, portable Rocket League companion with live stats, MMR tracking, overlays, cosmetics swap and workshop maps — no injection, no ban risk." />
+  <meta name="description" content="Looking for a BakkesMod alternative in 2026? Bakkboard is a free Rocket League companion with live stats, MMR tracking, overlays, cosmetics swap and workshop maps — no injection, no ban risk." />
   <link rel="canonical" href="https://bakkboard.gg/blog/bakkesmod-alternative-2026.html" />
   <link rel="icon" type="image/x-icon" href="../icons/favicon.ico" />
   <link rel="stylesheet" href="blog.css" />
@@ -18,17 +18,25 @@
   </script></head>
 <body>
 
-<nav>
+
+<div class="page-atmosphere" aria-hidden="true">
+  <div class="atmo-grid"></div>
+  <div class="atmo-glow atmo-glow--top"></div>
+  <div class="atmo-glow atmo-glow--left"></div>
+  <div class="atmo-glow atmo-glow--right"></div>
+</div>
+<div class="page-shell">
+<nav id="site-nav">
   <div class="nav-inner">
     <a class="nav-logo" href="/">
       <img src="../icons/icon-192.png" alt="Bakkboard logo" />
       <span>Bakkboard</span>
     </a>
     <div class="nav-links">
-      <a href="/#how-it-works" style="color:var(--text-dim);text-decoration:none;font-size:14px;">How it works</a>
-      <a href="/blog/" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Blog</a>
-      <a href="/changelog" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Changelog</a>
-      <a href="/feedback.html" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Feedback</a>
+      <a class="nav-text-link" href="/#how-it-works">How it works</a>
+      <a class="nav-text-link" href="/blog/">Blog</a>
+      <a class="nav-text-link" href="/changelog">Changelog</a>
+      <a class="nav-text-link" href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
       <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
@@ -40,7 +48,7 @@
   <a href="/#how-it-works">How it works</a>
   <a href="/blog/">Blog</a>
   <a href="/changelog">Changelog</a>
-  <a href="/feedback.html">Feedback</a>
+  <a href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
   <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
 </div>
 <script>
@@ -56,6 +64,13 @@
       _hbBtn.classList.remove('open');
     });
   });
+
+  const siteNav = document.getElementById('site-nav');
+  if (siteNav) {
+    const onNavScroll = () => siteNav.classList.toggle('is-scrolled', window.scrollY > 8);
+    onNavScroll();
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+  }
 </script>
 
 <div class="article-wrap">
@@ -75,57 +90,72 @@
   <p>Finding a replacement means asking a different question: <strong>what did you actually use BakkesMod for?</strong> The answer shapes what you need today.</p>
 
   <h2>What Bakkboard replaces — and then some</h2>
-  <p>Bakkboard is a free, portable Windows app that runs alongside Rocket League and handles everything that matters: live match tracking, MMR trends, session stats, in-game overlays, cosmetics swap and workshop maps. No installation required. No runtime injection into the game process.</p>
+  <p>Bakkboard is a free Windows app that runs alongside Rocket League and handles everything that matters: live match tracking, MMR trends, session stats, in-game overlays, cosmetics swap and workshop maps. No installation required. No runtime injection into the game process.</p>
 
   <h3>Live match scoreboard</h3>
   <p>Goals, assists, saves, shots, touches, crossbars and demos for every player in real time. Tracker.gg rank and peak rank are fetched automatically for each player in the lobby the moment the match starts.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_1.gif" alt="Bakkboard live match scoreboard with player ranks" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_1_v3.gif" alt="Bakkboard live match scoreboard with player ranks" class="article-img" />
   <p class="img-caption">Full live scoreboard with Tracker.gg ranks for every player.</p>
 
   <h3>Player tracking &amp; encounter history</h3>
   <p>Add any opponent or teammate to your tracked players list and Bakkboard will alert you the next time they appear in your lobby. A full encounter history shows how previous matches against that player went.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_2.gif" alt="Bakkboard player tracking panel" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_2_v3.gif" alt="Bakkboard player tracking panel" class="article-img" />
   <p class="img-caption">Player tracking panel — get notified when a tracked player joins your lobby.</p>
 
   <h3>MMR trends and session analytics</h3>
   <p>W/L record, win rate, streak and MMR delta filtered by period (session, today, all-time) and playlist. Full rank history charts, W/L timeline and play-style metrics over time.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_3.gif" alt="Bakkboard MMR charts and analytics" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_3_v3.gif" alt="Bakkboard MMR charts and analytics" class="article-img" />
   <p class="img-caption">MMR progression, W/L timeline and play-style analytics.</p>
 
   <h3>Cosmetics swap</h3>
   <p>Apply custom car body, decal, paint finish, wheels, boost, topper, antenna, goal explosion, trail, engine audio, player banner and avatar border through UPK file patching. Originals are backed up automatically and restored with a single click. Nothing runs inside the game.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_4_v2.gif" alt="Bakkboard cosmetics swap panel" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_4_v3.gif" alt="Bakkboard cosmetics swap panel" class="article-img" />
   <p class="img-caption">Cosmetics swap — apply any decal or wheel without runtime injection.</p>
 
   <h3>Custom decals</h3>
   <p>Beyond swapping to decals the game already ships with, the Custom Decals tab hosts a curated catalog of community-made decal packs — designs that never existed in Rocket League's own item system. Browse by car body, download a pack and apply it in a couple of clicks, with the original backed up and restorable instantly.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_11.gif" alt="Bakkboard custom decals catalog" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_5_v3.gif" alt="Bakkboard custom decals catalog" class="article-img" />
   <p class="img-caption">Browsing and applying a custom decal pack from the Custom Decals catalog.</p>
 
   <h3>Custom ball</h3>
   <p>Custom ball skin — swap the in-game ball with any design you want. Works in both freeplay and online matches. Choose from pre-included ball designs or import your own. UPK &amp; TFC file patching, original backed up and restored in one click, no runtime injection.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_5.gif" alt="Bakkboard custom ball" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_6_v3.gif" alt="Bakkboard custom ball" class="article-img" />
   <p class="img-caption">Custom ball — swap the ball skin without touching the game process.</p>
 
   <h3>Custom boost meter</h3>
   <p>Replace the in-game boost meter textures with any custom design. Choose from pre-included packs or import your own. UPK file patching, original backed up and restored in one click, no runtime injection.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_6.gif" alt="Bakkboard custom boost meter" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_7_v3.gif" alt="Bakkboard custom boost meter" class="article-img" />
   <p class="img-caption">Custom boost meter — replace boost textures with any design, no injection.</p>
 
   <h3>Workshop maps</h3>
   <p>Browse, search and load any workshop map into Free Play directly from the app. Sort by downloads, rating, size or date. Works with both Steam and Epic Games.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_7.gif" alt="Bakkboard workshop map browser" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_8_v3.gif" alt="Bakkboard workshop map browser" class="article-img" />
   <p class="img-caption">Workshop map browser — one click to load any map into Free Play.</p>
 
   <h3>In-game overlays</h3>
   <p>A Stats Bar, Rank Badge, live Match Scoreboard overlay and Magic Rank — all positionable, scalable and opacity-adjustable. Magic Rank puts rank icons directly on the in-game tab scoreboard, exactly where BakkesMod's RocketStats used to show them. There is also a Goal Replay Stats overlay, which shows the scorer's lifetime stats and rank right next to the game's native "SCORED BY" banner during goal replays.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_8_v2.gif" alt="Bakkboard overlays running during a match" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_9_v3.gif" alt="Bakkboard overlays running during a match" class="article-img" />
   <p class="img-caption">Stats Bar, Rank Badge and Magic Rank overlays running live.</p>
 
   <h3>Quick chat</h3>
   <p>Send custom chat messages instantly with a configurable key combination — keyboard or controller. Choose the scope for each message: Global, Team or Party. Messages are sent via Windows SendInput API, exactly as if you typed them yourself, but instantly. No game memory access, no injection.</p>
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_10.gif" alt="Bakkboard quick chat" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_11_v3.gif" alt="Bakkboard quick chat" class="article-img" />
   <p class="img-caption">Quick chat — send custom messages instantly with any key combination.</p>
+
+  <h3>Fake name</h3>
+  <p>Set any custom display name. Visible in lobby — other players will see your fake name. Change whenever you want — no Epic Games rename cooldown.</p>
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_12_v3.gif" alt="Bakkboard fake name" class="article-img" />
+  <p class="img-caption">Fake name — custom display name visible to other players in lobby.</p>
+
+  <h3>Fake title</h3>
+  <p><strong>Swap</strong> — wear any title from the catalog. <strong>Customize</strong> — set custom text with your own text and colors. Local only — other players still see your real title.</p>
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_13_v3.gif" alt="Bakkboard fake title" class="article-img" />
+  <p class="img-caption">Fake title — swap any catalog title or customize your own text and colors.</p>
+
+  <h3>Fake rank</h3>
+  <p>Spoof tier, division and MMR per playlist. Optional season rewards level and win count. Enable each playlist independently. Local only — other players still see your real rank.</p>
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_14_v3.gif" alt="Bakkboard fake rank" class="article-img" />
+  <p class="img-caption">Fake rank — spoof tier, division and MMR per playlist on your screen.</p>
 
   <h2>No injection, no Easy Anti-Cheat conflict, no ban risk</h2>
   <p>Bakkboard takes a completely different approach from BakkesMod. It does not inject DLLs, does not hook into <code>RocketLeague.exe</code> at runtime, and does not touch game memory in any way. <strong>Easy Anti-Cheat never sees it</strong> because Bakkboard never interacts with the game process.</p>
@@ -142,7 +172,7 @@
   <p>Bakkboard tracks multiple accounts independently. Switch accounts at any time to view stats, history and ranks per profile. If you have renamed an account, you can merge histories to keep everything together.</p>
   <p>Every match is saved with the full scoreboard, event log, possession data and rank snapshot. You can reopen any past match exactly as it happened, exclude it from analytics without deleting it, or exclude it from win probability training independently.</p>
 
-  <h2>Free, portable, no account required</h2>
+  <h2>Free, no account required</h2>
   <p>Bakkboard is a single <code>.exe</code> file. Double-click and it runs. No installer, no Python, no dependencies to manage. It works on Windows 10 and 11 and requires no account, no login, and no data sent anywhere except optional Tracker.gg lookups on your behalf.</p>
 
   <div class="cta-box">
@@ -164,10 +194,10 @@
 </div>
 
 <footer>
-  <a href="/">Bakkboard</a> &nbsp;·&nbsp;
-  <a href="/blog/">Blog</a> &nbsp;·&nbsp;
-  Not affiliated with Psyonix or Epic Games.
+  <div class="footer-inner">Made with ♥ by Loris Lorenzetti &nbsp;·&nbsp; Not affiliated with Psyonix or Epic Games.</div>
 </footer>
 
+
+</div><!-- .page-shell -->
 </body>
 </html>

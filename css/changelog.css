@@ -1,0 +1,195 @@
+/* Bakkboard — changelog */
+
+.cl-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+}
+
+.cl-header {
+  margin-bottom: 52px;
+}
+
+.cl-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.cl-header p {
+  color: var(--text-dim);
+  font-size: 15px;
+}
+
+.cl-release {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+.cl-aside {
+  flex-shrink: 0;
+  width: 110px;
+  padding-top: 3px;
+}
+
+.cl-version {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background: rgba(94, 184, 255, 0.08);
+  border: 1px solid rgba(94, 184, 255, 0.18);
+  color: var(--blue);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.cl-date {
+  font-size: 11px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.cl-body {
+  flex: 1;
+  border-left: 2px solid var(--border);
+  padding-left: 28px;
+  min-width: 0;
+}
+
+.cl-release:first-child .cl-body { border-color: var(--blue); }
+
+.cl-md h1, .cl-md h2 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 20px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cl-md h1:first-child, .cl-md h2:first-child { margin-top: 0; }
+
+.cl-md h3 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin: 16px 0 6px;
+}
+
+.cl-md h3:first-child { margin-top: 0; }
+
+.cl-md p {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  line-height: 1.65;
+}
+
+.cl-md ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cl-md ul li {
+  font-size: 14px;
+  color: var(--text-dim);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.55;
+}
+
+.cl-md ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 6px var(--blue-glow);
+}
+
+.cl-md strong { color: var(--text); font-weight: 600; }
+.cl-md em { font-style: italic; color: var(--text-dim); }
+
+.cl-md code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.cl-md a { color: var(--blue); text-decoration: none; }
+.cl-md a:hover { text-decoration: underline; }
+
+.cl-md hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 16px 0;
+}
+
+.cl-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dim);
+  font-size: 14px;
+  padding: 40px 0;
+}
+
+.cl-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.cl-error, .cl-empty {
+  color: var(--text-dim);
+  font-size: 14px;
+  padding: 40px 0;
+}
+
+.cl-release + .cl-release .cl-body { border-color: var(--border); }
+
+@media (max-width: 580px) {
+  .cl-page { padding: 48px 24px 80px; }
+  .cl-release { flex-direction: column; gap: 12px; }
+  .cl-aside {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 0;
+  }
+  .cl-body {
+    border-left: none;
+    border-top: 2px solid var(--border);
+    padding-left: 0;
+    padding-top: 16px;
+  }
+  .cl-release:first-child .cl-body { border-color: var(--blue); }
+}

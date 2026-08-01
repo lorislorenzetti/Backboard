@@ -1,49 +1,13 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bakkboard Blog — Rocket League Guides & Feature Deep-Dives</title>
-  <meta name="description" content="Bakkboard blog: guides, tips and feature deep-dives for Rocket League — live match stats, MMR tracking, overlays, cosmetics swap, workshop maps and more." />
+  <title>Bakkboard Blog â€” Rocket League Guides & Feature Deep-Dives</title>
+  <meta name="description" content="Bakkboard blog: guides, tips and feature deep-dives for Rocket League â€” live match stats, MMR tracking, overlays, cosmetics swap, workshop maps and more." />
   <link rel="canonical" href="https://bakkboard.gg/blog/" />
   <link rel="icon" type="image/x-icon" href="../icons/favicon.ico" />
   <link rel="stylesheet" href="blog.css" />
-  <style>
-    .blog-hero { padding: 56px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
-    .blog-hero h1 { font-size: clamp(26px, 4vw, 36px); margin-bottom: 10px; }
-    .blog-hero p  { font-size: 16px; max-width: 520px; }
-
-    .articles-grid { display: grid; gap: 20px; }
-    .article-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px 28px;
-      display: flex; flex-direction: column; gap: 8px;
-      text-decoration: none;
-      transition: border-color .15s, box-shadow .15s;
-    }
-    .article-card:hover {
-      border-color: rgba(88,166,255,.4);
-      box-shadow: 0 4px 20px rgba(0,0,0,.3);
-      text-decoration: none;
-    }
-    .card-meta {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 12px; color: var(--text-dim);
-    }
-    .article-card h2 {
-      font-size: 17px; font-weight: 700;
-      color: var(--text); margin: 0;
-    }
-    .article-card p {
-      font-size: 14px; color: var(--text-dim); margin: 0;
-    }
-    .card-arrow {
-      font-size: 13px; color: var(--blue); font-weight: 600;
-      margin-top: 4px;
-    }
-  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2RBXCP2QT"></script>
   <script>
@@ -54,17 +18,25 @@
   </script></head>
 <body>
 
-<nav>
+
+<div class="page-atmosphere" aria-hidden="true">
+  <div class="atmo-grid"></div>
+  <div class="atmo-glow atmo-glow--top"></div>
+  <div class="atmo-glow atmo-glow--left"></div>
+  <div class="atmo-glow atmo-glow--right"></div>
+</div>
+<div class="page-shell">
+<nav id="site-nav">
   <div class="nav-inner">
     <a class="nav-logo" href="/">
       <img src="../icons/icon-192.png" alt="Bakkboard logo" />
       <span>Bakkboard</span>
     </a>
     <div class="nav-links">
-      <a href="/#how-it-works" style="color:var(--text-dim);text-decoration:none;font-size:14px;">How it works</a>
-      <a href="/blog/" style="color:var(--text);text-decoration:none;font-size:14px;font-weight:600;">Blog</a>
-      <a href="/changelog" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Changelog</a>
-      <a href="/feedback.html" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Feedback</a>
+      <a class="nav-text-link" href="/#how-it-works">How it works</a>
+      <a class="nav-text-link is-active" href="/blog/">Blog</a>
+      <a class="nav-text-link" href="/changelog">Changelog</a>
+      <a class="nav-text-link" href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
       <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
@@ -76,7 +48,7 @@
   <a href="/#how-it-works">How it works</a>
   <a href="/blog/">Blog</a>
   <a href="/changelog">Changelog</a>
-  <a href="/feedback.html">Feedback</a>
+  <a href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
   <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
 </div>
 <script>
@@ -92,204 +64,247 @@
       _hbBtn.classList.remove('open');
     });
   });
+
+  const siteNav = document.getElementById('site-nav');
+  if (siteNav) {
+    const onNavScroll = () => siteNav.classList.toggle('is-scrolled', window.scrollY > 8);
+    onNavScroll();
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+  }
 </script>
 
 <div class="article-wrap">
   <div class="blog-hero">
     <h1>Bakkboard Blog</h1>
-    <p>Guides, tips and feature deep-dives for Rocket League — all written for Bakkboard users.</p>
+    <p>Guides, tips and feature deep-dives for Rocket League â€” all written for Bakkboard users.</p>
   </div>
 
   <div class="articles-grid">
+
+    <a class="article-card" href="rocket-league-change-name-no-cooldown-2026.html">
+      <div class="card-meta">
+        <span class="article-tag">Identity</span>
+        <span>August 2026</span>
+        <span>Â·</span>
+        <span>5 min read</span>
+      </div>
+      <h2>How to Change Your Rocket League Name Without Cooldown (2026)</h2>
+      <p>Skip the Epic rename cooldown â€” set any display name instantly, visible in lobby to other players. Free, no injection.</p>
+      <span class="card-arrow">Read article â†’</span>
+    </a>
+
+    <a class="article-card" href="rocket-league-fake-rank-2026.html">
+      <div class="card-meta">
+        <span class="article-tag">Identity</span>
+        <span>August 2026</span>
+        <span>Â·</span>
+        <span>5 min read</span>
+      </div>
+      <h2>How to Show Any Rank in Rocket League on Your Screen (2026)</h2>
+      <p>Display any tier, division and MMR per playlist on your client â€” for streams, clips and overlays. Local only, matchmaking unchanged.</p>
+      <span class="card-arrow">Read article â†’</span>
+    </a>
+
+    <a class="article-card" href="rocket-league-custom-title-2026.html">
+      <div class="card-meta">
+        <span class="article-tag">Identity</span>
+        <span>August 2026</span>
+        <span>Â·</span>
+        <span>4 min read</span>
+      </div>
+      <h2>How to Wear Any Title in Rocket League (2026)</h2>
+      <p>Swap any catalog title or create a custom one with your own text and colors â€” on your screen only.</p>
+      <span class="card-arrow">Read article â†’</span>
+    </a>
 
     <a class="article-card" href="rocket-league-custom-decal-packs-2026.html">
       <div class="card-meta">
         <span class="article-tag">Cosmetics</span>
         <span>July 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
       <h2>How to Apply Custom Decal Packs in Rocket League (2026)</h2>
       <p>Browse a curated catalog of community-made decal packs and apply them to your car in a couple of clicks. Free, no injection, originals restored instantly.</p>
-      <span class="card-arrow">Read article ?</span>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-custom-ball-2026.html">
       <div class="card-meta">
         <span class="article-tag">Cosmetics</span>
         <span>July 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>4 min read</span>
       </div>
       <h2>How to Get a Custom Ball Skin in Rocket League (2026)</h2>
-      <p>Replace the Rocket League ball with any custom skin — works in freeplay and online. Free, no injection, original restored in one click.</p>
-      <span class="card-arrow">Read article ?</span>
+      <p>Replace the Rocket League ball with any custom skin â€” works in freeplay and online. Free, no injection, original restored in one click.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-custom-boost-meter-2026.html">
       <div class="card-meta">
         <span class="article-tag">Cosmetics</span>
         <span>July 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>4 min read</span>
       </div>
       <h2>How to Get a Custom Boost Meter in Rocket League (2026)</h2>
       <p>Replace the boost bar with any custom design. Free, no injection, original restored in one click.</p>
-      <span class="card-arrow">Read article ?</span>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-quick-chat-2026.html">
       <div class="card-meta">
         <span class="article-tag">Quick Chat</span>
         <span>July 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>4 min read</span>
       </div>
-      <h2>Rocket League Custom Quick Chat — Send Any Message Instantly (2026)</h2>
-      <p>Send fully custom chat messages in Rocket League with one key press — any text, any key, Global, Team or Party scope.</p>
-      <span class="card-arrow">Read article ?</span>
+      <h2>Rocket League Custom Quick Chat â€” Send Any Message Instantly (2026)</h2>
+      <p>Send fully custom chat messages in Rocket League with one key press â€” any text, any key, Global, Team or Party scope.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="bakkesmod-alternative-2026.html">
       <div class="card-meta">
         <span class="article-tag">Comparison</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>7 min read</span>
       </div>
       <h2>The Best BakkesMod Alternative for Rocket League in 2026</h2>
-      <p>BakkesMod no longer works. Here is what Bakkboard replaces — live stats, overlays, cosmetics swap, workshop maps and more — without injection or ban risk.</p>
-      <span class="card-arrow">Read article ?</span>
+      <p>BakkesMod no longer works. Here is what Bakkboard replaces â€” live stats, overlays, cosmetics swap, workshop maps and more â€” without injection or ban risk.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-overlays-2026.html">
       <div class="card-meta">
         <span class="article-tag">Overlays</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
-      <h2>Rocket League Overlays in 2026 — Stats Bar, Rank Badge &amp; More</h2>
-      <p>Four independent overlays for Rocket League: Stats Bar, Rank Badge, live Match Scoreboard and Magic Rank — all positionable, scalable, and OBS-compatible.</p>
-      <span class="card-arrow">Read article ?</span>
+      <h2>Rocket League Overlays in 2026 â€” Stats Bar, Rank Badge &amp; More</h2>
+      <p>Four independent overlays for Rocket League: Stats Bar, Rank Badge, live Match Scoreboard and Magic Rank â€” all positionable, scalable, and OBS-compatible.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-live-match-stats.html">
       <div class="card-meta">
         <span class="article-tag">Live Match</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
-      <h2>Rocket League Live Match Stats — Scoreboard, Event Log &amp; Player Ranks</h2>
+      <h2>Rocket League Live Match Stats â€” Scoreboard, Event Log &amp; Player Ranks</h2>
       <p>Full live scoreboard with goals, assists, saves, shots, demos, Tracker.gg ranks and a real-time event log for every match.</p>
-      <span class="card-arrow">Read article ?</span>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-mmr-tracker.html">
       <div class="card-meta">
         <span class="article-tag">Stats &amp; MMR</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
       <h2>How to Track Your Rocket League MMR and Session Stats</h2>
-      <p>W/L record, win rate, streak, MMR delta and full rank history — filtered by playlist and period, stored locally, no account needed.</p>
-      <span class="card-arrow">Read article ?</span>
+      <p>W/L record, win rate, streak, MMR delta and full rank history â€” filtered by playlist and period, stored locally, no account needed.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-win-probability.html">
       <div class="card-meta">
         <span class="article-tag">Analytics</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>6 min read</span>
       </div>
-      <h2>Rocket League Win Probability — What It Means and How Bakkboard Calculates It</h2>
+      <h2>Rocket League Win Probability â€” What It Means and How Bakkboard Calculates It</h2>
       <p>A live win probability bar updated every second, blending a calibrated statistical model with your personal match history.</p>
-      <span class="card-arrow">Read article ?</span>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-custom-decals-wheels-boost-2026.html">
       <div class="card-meta">
         <span class="article-tag">Cosmetics</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
       <h2>How to Get Alpha Boost, Custom Decals, Wheels and More in Rocket League (2026)</h2>
-      <p>Apply Alpha Boost, car body, decal, paint finish, wheels, boost, topper, antenna, goal explosion, trail, engine audio, player banner and avatar border via UPK file patching — no runtime injection, originals backed up and restorable with a single click.</p>
-      <span class="card-arrow">Read article ?</span>
+      <p>Apply Alpha Boost, car body, decal, paint finish, wheels, boost, topper, antenna, goal explosion, trail, engine audio, player banner and avatar border via UPK file patching â€” no runtime injection, originals backed up and restorable with a single click.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-workshop-maps-2026.html">
       <div class="card-meta">
         <span class="article-tag">Workshop</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>4 min read</span>
       </div>
       <h2>How to Load Workshop Maps in Rocket League (2026)</h2>
       <p>Browse, search and load any workshop map into Free Play with one click. Sorted by downloads, rating, size or date. Steam and Epic Games.</p>
-      <span class="card-arrow">Read article ?</span>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-custom-sounds-2026.html">
       <div class="card-meta">
         <span class="article-tag">Custom Sounds</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
-      <h2>How to Add Custom Sounds to Rocket League — Goals, Saves, Demos &amp; Crossbars</h2>
+      <h2>How to Add Custom Sounds to Rocket League â€” Goals, Saves, Demos &amp; Crossbars</h2>
       <p>Play custom audio clips on goals, saves, demolitions and crossbars in Rocket League. Drag and drop any audio file, trim it, set the volume and choose who triggers it.</p>
-      <span class="card-arrow">Read article ?</span>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="how-to-get-alpha-boost-rocket-league.html">
       <div class="card-meta">
         <span class="article-tag">Cosmetics</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>4 min read</span>
       </div>
       <h2>How to Get Alpha Boost in Rocket League in 2026</h2>
-      <p>Trading is gone. Alpha Boost is unobtainable — unless you use Bakkboard's cosmetics swap to apply it locally, with no ban risk and no money spent.</p>
-      <span class="card-arrow">Read article ?</span>
+      <p>Trading is gone. Alpha Boost is unobtainable â€” unless you use Bakkboard's cosmetics swap to apply it locally, with no ban risk and no money spent.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-win-rate-improve.html">
       <div class="card-meta">
         <span class="article-tag">Analytics</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
-      <h2>How to Improve Your Win Rate in Rocket League — Stats, Patterns and What Actually Matters</h2>
+      <h2>How to Improve Your Win Rate in Rocket League â€” Stats, Patterns and What Actually Matters</h2>
       <p>Win rate in Rocket League is not random. Here is how to read your own stats, identify real patterns and use data to improve your results.</p>
-      <span class="card-arrow">Read article ?</span>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
     <a class="article-card" href="rocket-league-session-stats.html">
       <div class="card-meta">
         <span class="article-tag">Stats &amp; MMR</span>
         <span>June 2026</span>
-        <span>·</span>
+        <span>Â·</span>
         <span>5 min read</span>
       </div>
-      <h2>How to Track Your Rocket League Session Stats — W/L, MMR Delta and Streak per Playlist</h2>
-      <p>Track your Rocket League session stats in real time: wins, losses, win rate, streak, MMR delta and detailed performance stats — filtered by playlist and time period.</p>
-      <span class="card-arrow">Read article ?</span>
+      <h2>How to Track Your Rocket League Session Stats â€” W/L, MMR Delta and Streak per Playlist</h2>
+      <p>Track your Rocket League session stats in real time: wins, losses, win rate, streak, MMR delta and detailed performance stats â€” filtered by playlist and time period.</p>
+      <span class="card-arrow">Read article â†’</span>
     </a>
 
   </div>
 </div>
 
 <footer>
-  <a href="/">Bakkboard</a> &nbsp;·&nbsp;
-  <a href="/">Home</a> &nbsp;·&nbsp;
-  Not affiliated with Psyonix or Epic Games.
+  <div class="footer-inner">Made with â™¥ by Loris Lorenzetti &nbsp;Â·&nbsp; Not affiliated with Psyonix or Epic Games.</div>
 </footer>
 
+
+</div><!-- .page-shell -->
 </body>
 </html>

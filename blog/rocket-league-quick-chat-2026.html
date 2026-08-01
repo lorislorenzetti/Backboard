@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -18,17 +18,25 @@
   </script></head>
 <body>
 
-<nav>
+
+<div class="page-atmosphere" aria-hidden="true">
+  <div class="atmo-grid"></div>
+  <div class="atmo-glow atmo-glow--top"></div>
+  <div class="atmo-glow atmo-glow--left"></div>
+  <div class="atmo-glow atmo-glow--right"></div>
+</div>
+<div class="page-shell">
+<nav id="site-nav">
   <div class="nav-inner">
     <a class="nav-logo" href="/">
       <img src="../icons/icon-192.png" alt="Bakkboard logo" />
       <span>Bakkboard</span>
     </a>
     <div class="nav-links">
-      <a href="/#how-it-works" style="color:var(--text-dim);text-decoration:none;font-size:14px;">How it works</a>
-      <a href="/blog/" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Blog</a>
-      <a href="/changelog" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Changelog</a>
-      <a href="/feedback.html" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Feedback</a>
+      <a class="nav-text-link" href="/#how-it-works">How it works</a>
+      <a class="nav-text-link" href="/blog/">Blog</a>
+      <a class="nav-text-link" href="/changelog">Changelog</a>
+      <a class="nav-text-link" href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
       <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
@@ -40,7 +48,7 @@
   <a href="/#how-it-works">How it works</a>
   <a href="/blog/">Blog</a>
   <a href="/changelog">Changelog</a>
-  <a href="/feedback.html">Feedback</a>
+  <a href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
   <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
 </div>
 <script>
@@ -56,6 +64,12 @@
       _hbBtn.classList.remove('open');
     });
   });
+  const siteNav = document.getElementById('site-nav');
+  if (siteNav) {
+    const onNavScroll = () => siteNav.classList.toggle('is-scrolled', window.scrollY > 8);
+    onNavScroll();
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+  }
 </script>
 
 <div class="article-wrap">
@@ -69,7 +83,7 @@
   <h1>Rocket League Custom Quick Chat — Send Any Message Instantly</h1>
   <p class="lead">Rocket League's built-in quick chat gives you a fixed list of preset phrases. Bakkboard's Quick Chat feature breaks that limit: add any text you want, bind it to any key or controller button, and send it instantly during a match.</p>
 
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_10.gif" alt="Bakkboard custom quick chat" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_11_v3.gif" alt="Bakkboard custom quick chat" class="article-img" />
   <p class="img-caption">Configuring custom quick chat messages and key bindings in Bakkboard.</p>
 
   <h2>What custom quick chat does</h2>
@@ -110,10 +124,10 @@
 </div>
 
 <footer>
-  <a href="/">Bakkboard</a> &nbsp;·&nbsp;
-  <a href="/blog/">Blog</a> &nbsp;·&nbsp;
-  Not affiliated with Psyonix or Epic Games.
+  <div class="footer-inner">Made with ♥ by Loris Lorenzetti &nbsp;·&nbsp; Not affiliated with Psyonix or Epic Games.</div>
 </footer>
 
+
+</div><!-- .page-shell -->
 </body>
 </html>

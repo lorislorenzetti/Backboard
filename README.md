@@ -2,7 +2,7 @@
 
 **The complete Rocket League toolkit. The best BakkesMod alternative in 2026.**
 
-Bakkboard runs alongside Rocket League and tracks everything that happens in your matches — live stats, MMR trends, overlays, cosmetics swap, workshop maps, custom sounds, quick chat and more. Open it before a session and it takes care of the rest.
+Bakkboard runs alongside Rocket League and tracks everything that happens in your matches — live stats, MMR trends, overlays, cosmetics swap, workshop maps, custom sounds, quick chat, fake name, title and rank, and more. Open it before a session and it takes care of the rest.
 
 ---
 
@@ -99,6 +99,25 @@ No installation required. Double-click and play.
 - Choose the scope for each chat: Global, Team or Party
 
 
+### 👤 Fake Name
+- Set any custom display name
+- No Epic Games rename cooldown — change whenever you want
+- Visible in lobby — other players will see your fake name
+
+
+### 🏷️ Fake Title
+- **Swap** — wear any title from the catalog
+- **Customize** — set custom text with your own text and colors
+- Local only — other players still see your real title
+
+
+### 🏆 Fake Rank
+- Spoof tier, division and MMR per playlist
+- Optional season rewards level and win count
+- Enable each playlist independently
+- Local only — other players still see your real rank
+
+
 ### 🎲 Win Probability
 - Live bar updated every second
 - Blends a calibrated model with your historical match data
@@ -176,9 +195,9 @@ Bakkboard is a third-party application and is not affiliated with Psyonix or Epi
 
 ## Antivirus
 
-Bakkboard.exe is scanned and verified clean. **0 detections out of 68 antivirus engines on VirusTotal.**
+Bakkboard.exe is scanned and verified clean. **0 detections out of 69 antivirus engines on VirusTotal.**
 
-[→ View VirusTotal scan](https://www.virustotal.com/gui/file/6e7186a32cbe72ea415121bbbdd09a3d3f55be698ca0d56ca3945f3710daf1d8)
+[→ View VirusTotal scan](https://www.virustotal.com/gui/file/85ca3b58668d6d850c6faf1c02294b4fe791fa8198ba9c1b0c82b6c64ca8b4f5)
 
 ---
 

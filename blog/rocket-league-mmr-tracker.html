@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -18,17 +18,25 @@
   </script></head>
 <body>
 
-<nav>
+
+<div class="page-atmosphere" aria-hidden="true">
+  <div class="atmo-grid"></div>
+  <div class="atmo-glow atmo-glow--top"></div>
+  <div class="atmo-glow atmo-glow--left"></div>
+  <div class="atmo-glow atmo-glow--right"></div>
+</div>
+<div class="page-shell">
+<nav id="site-nav">
   <div class="nav-inner">
     <a class="nav-logo" href="/">
       <img src="../icons/icon-192.png" alt="Bakkboard logo" />
       <span>Bakkboard</span>
     </a>
     <div class="nav-links">
-      <a href="/#how-it-works" style="color:var(--text-dim);text-decoration:none;font-size:14px;">How it works</a>
-      <a href="/blog/" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Blog</a>
-      <a href="/changelog" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Changelog</a>
-      <a href="/feedback.html" style="color:var(--text-dim);text-decoration:none;font-size:14px;">Feedback</a>
+      <a class="nav-text-link" href="/#how-it-works">How it works</a>
+      <a class="nav-text-link" href="/blog/">Blog</a>
+      <a class="nav-text-link" href="/changelog">Changelog</a>
+      <a class="nav-text-link" href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
       <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
@@ -40,7 +48,7 @@
   <a href="/#how-it-works">How it works</a>
   <a href="/blog/">Blog</a>
   <a href="/changelog">Changelog</a>
-  <a href="/feedback.html">Feedback</a>
+  <a href="https://discord.gg/5pMNsBxvSE" target="_blank" rel="noopener noreferrer">Join Discord</a>
   <a class="btn-nav-dl" href="https://github.com/lorislorenzetti/bakkboard/releases/latest/download/Bakkboard.exe">Download</a>
 </div>
 <script>
@@ -56,6 +64,12 @@
       _hbBtn.classList.remove('open');
     });
   });
+  const siteNav = document.getElementById('site-nav');
+  if (siteNav) {
+    const onNavScroll = () => siteNav.classList.toggle('is-scrolled', window.scrollY > 8);
+    onNavScroll();
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+  }
 </script>
 
 <div class="article-wrap">
@@ -69,7 +83,7 @@
   <h1>How to Track Your Rocket League MMR and Session Stats</h1>
   <p class="lead">Bakkboard tracks your Rocket League performance automatically — W/L, win rate, streak, MMR delta and full rank history — filtered by playlist and time period, without any account or login.</p>
 
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_3.gif" alt="Bakkboard analytics and MMR charts" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_3_v3.gif" alt="Bakkboard analytics and MMR charts" class="article-img" />
   <p class="img-caption">MMR trends, W/L timeline and play-style analytics in Bakkboard.</p>
 
   <h2>Session stats that reset when you want</h2>
@@ -90,7 +104,7 @@
   <h2>Player tracking — monitor specific opponents</h2>
   <p>If you encounter a player frequently — whether an opponent or a teammate — you can add them to your <strong>Tracked Players</strong> list. Bakkboard will automatically display a notification badge when that player appears in your lobby, so you are always prepared before kickoff.</p>
 
-  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_2.gif" alt="Bakkboard player tracking panel" class="article-img" />
+  <img src="https://cdn.bakkboard.gg/assets/Bakkboard_2_v3.gif" alt="Bakkboard player tracking panel" class="article-img" />
   <p class="img-caption">Player tracking panel with encounter badges and quick stat lookups.</p>
 
   <h2>All data stays local</h2>
@@ -110,10 +124,10 @@
 </div>
 
 <footer>
-  <a href="/">Bakkboard</a> &nbsp;·&nbsp;
-  <a href="/blog/">Blog</a> &nbsp;·&nbsp;
-  Not affiliated with Psyonix or Epic Games.
+  <div class="footer-inner">Made with ♥ by Loris Lorenzetti &nbsp;·&nbsp; Not affiliated with Psyonix or Epic Games.</div>
 </footer>
 
+
+</div><!-- .page-shell -->
 </body>
 </html>
